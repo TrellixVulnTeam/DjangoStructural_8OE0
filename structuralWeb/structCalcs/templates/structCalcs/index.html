@@ -1,0 +1,225 @@
+{% extends 'structCalcs/dbtemplate.html' %}
+
+{% block content %}
+
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+  <style>
+      #drop-area {
+      border: 2px dashed #ccc;
+      border-radius: 15px;
+      width: 1050px;
+      height: 635px;
+      font-family: sans-serif;
+      margin: 50px auto;
+      padding: 5px;
+      position: relative;
+      }
+
+      #drop-area.highlight {
+        border-color: purple;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 0;
+      }
+
+      .merge-form {
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+
+      #gallery {
+        margin-top: 10px;
+      }
+
+      #gallery img {
+        width: 150px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px;
+        width: 120px;
+        height: 45px;
+        text-align: center;
+        background: #2E3440;
+        color: #E5E9F0;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #2E3440;
+        transition-duration: 0.4s;
+      }
+
+      .button:hover {
+        background: #ECEFF4;
+        color: #4C566A;
+      }
+
+        .btn_arrow {
+        display: inline-block;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        background: #2E3440;
+        color: #E5E9F0;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #2E3440;
+        transition-duration: 0.4s;
+      }
+
+      .btn_arrow:hover {
+        background: #ECEFF4;
+        color: #4C566A;
+      }
+
+      .button_container {
+        position: absolute;
+        left: 10%;
+        bottom: 11%;
+        transform: translateX(-50%);
+        text-align: center;
+        vertical-align: middle;
+      }
+
+
+      .button_container2 {
+        position: absolute;
+        left: 150px;
+        bottom: 0%;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .button_container3 {
+        position: absolute;
+        left: 300px;
+        bottom: 0%;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .button_container4 {
+        position: absolute;
+        left: 44px;
+        bottom: 10px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .form-container1 {
+        position: absolute;
+        left: 190px;
+        bottom: 25px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+        .btn_fileUp {
+        position: absolute;
+        left: 800px;
+        bottom: 5%;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+        .btn_fileDown {
+        position: absolute;
+        left: 870px;
+        bottom: 5%;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+
+      #fileElem {
+        display: none;
+      }
+
+      #combine_container {
+        position: absolute;
+        left: 10%;
+        top: 7.5%;
+        transform: translateX(-50%);
+        text-align: left;
+        background-color:#FFF;
+      }
+
+      #txtFileName {
+        position: absolute;
+        padding: 12px 20px;
+        height: 450px;
+        width: 925px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border: 1px solid;
+        transform: translateX(-6.5%);
+        padding-top: 10px;
+      }
+  </style>
+
+
+  <!-- Main Form for File Upload -->
+  <div class="container">
+    <!-- Select File/s Button -->
+    <div id="drop-area">
+      <form class="merge-form">
+        <p>Calculation Output Window</p>
+          <div id="combine_container">
+                <input id="txtFileName" type="text" multiple readonly="readonly"/>
+          </div>
+          <div class="button_container">
+            <div>
+                <input type="file" id="fileElem" multiple accept=".pdf" onchange="CopyMe(this, 'txtFileName');">
+                <label class="button" for="fileElem">Inputs</label>
+            </div>
+          <div class="button_container2">
+            <div>
+                <label class="button" for="fileElem">Calculate</label>
+            </div>
+          </div>
+          <div class="button_container3">
+            <div>
+                <label class="button" for="fileElem">Clear</label>
+            </div>
+          </div>
+          <div class="btn_fileUp">
+              <button class="btn_arrow">
+                  <i class="fas fa-arrow-up"></i>
+              </button>
+          </div>
+          <div class="btn_fileDown">
+              <button class="btn_arrow">
+                  <i class="fas fa-arrow-down"></i>
+              </button>
+          </div>
+        </div>
+        <div>
+          <div class="button_container4">
+            <div>
+                <label class="button" for="fileElem">Save To</label>
+            </div>
+          </div>
+          <div class="form-container1">
+                <form><input type="text" name="Name" size="95"></form>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+        function CopyMe(oFileInput, sTargetID) {
+        var arrTemp = oFileInput.value.split('\\');
+        document.getElementById(sTargetID).value = arrTemp[arrTemp.length - 1];
+        }
+    </script>
+
+
+
+{% endblock content %}
