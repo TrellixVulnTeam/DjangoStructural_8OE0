@@ -19,13 +19,13 @@ class Reinforcement:
 
     def hori_ReoControl(self):
         if UserInputs.crackControl == "Minor":
-            return self.p_hori_strong
+            return self.p_hori_minor
 
         elif UserInputs.crackControl == "Moderate":
             return self.p_hori_moderate
 
         else:
-            return self.p_hori_minor
+            return self.p_hori_strong
 
     # Minimum horizontal reinforcement requirements for Crack Control
     def vert_ReoControl(self):

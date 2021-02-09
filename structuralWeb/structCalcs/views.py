@@ -10,3 +10,7 @@ def index(request):
 def dbtemplate(request):
     return render(request, 'structCalcs/dbtemplate.html')
 
+
+def rcwall(request):
+    return render(request, 'structCalcs/rcwall.html')
+

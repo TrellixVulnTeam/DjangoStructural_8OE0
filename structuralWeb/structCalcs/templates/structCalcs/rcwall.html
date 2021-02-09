@@ -167,10 +167,51 @@
 
   <!-- Main Form for File Upload -->
   <div class="container">
-
-
-
-  </div>
+    <!-- Select File/s Button -->
+    <div id="drop-area">
+      <form class="merge-form">
+        <p>Calculation Output Window</p>
+          <div id="combine_container">
+                <input id="txtFileName" type="text" multiple readonly="readonly"/>
+          </div>
+          <div class="button_container">
+            <div>
+                <input type="file" id="fileElem" multiple accept=".pdf" onchange="CopyMe(this, 'txtFileName');">
+                <label class="button" for="fileElem">Inputs</label>
+            </div>
+          <div class="button_container2">
+            <div>
+                <label class="button" for="fileElem">Calculate</label>
+            </div>
+          </div>
+          <div class="button_container3">
+            <div>
+                <label class="button" for="fileElem">Clear</label>
+            </div>
+          </div>
+          <div class="btn_fileUp">
+              <button class="btn_arrow">
+                  <i class="fas fa-arrow-up"></i>
+              </button>
+          </div>
+          <div class="btn_fileDown">
+              <button class="btn_arrow">
+                  <i class="fas fa-arrow-down"></i>
+              </button>
+          </div>
+        </div>
+        <div>
+          <div class="button_container4">
+            <div>
+                <label class="button" for="fileElem">Save To</label>
+            </div>
+          </div>
+          <div class="form-container1">
+                <form><input type="text" name="Name" size="95"></form>
+          </div>
+        </div>
+      </form>
+    </div>
 
     <script>
         function CopyMe(oFileInput, sTargetID) {
