@@ -8,22 +8,23 @@ I am looking at building a Django web application that has a series of useful ca
 ## Setup
 The first thing to do is to clone the repository:
 
-$ git clone https://github.com/daveh07/DjangoStructural.git
-$ cd DjangoStructural
+> $ git clone https://github.com/daveh07/DjangoStructural.git
+> $ cd DjangoStructural
 
-Py Version: Python 3.8
+> Py Version: Python 3.8
 
 Create a virtual environment to install dependencies in and activate it
 
 
 Install Django (If not already installed)
 After you’ve created and activated a virtual environment, enter the command:
-$ python -m pip install Django
+
+> $ python -m pip install Django
 
 Once pip has finished downloading the dependencies:
 
-(env)$ cd project
-(env)$ python manage.py runserver
+> (env)$ cd project
+> (env)$ python manage.py runserver
 
 Any issues above, please refer to Django documentation: https://docs.djangoproject.com/en/3.1/topics/install/
 
