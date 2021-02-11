@@ -21,12 +21,15 @@ After you’ve created and activated a virtual environment, enter the command:
 
 > $ python -m pip install Django
 
+Or, if an error occurs - try:
+> $ pip3 install Django
+
 Once pip has finished downloading the dependencies:
 
 > (env)$ cd project
 > (env)$ python manage.py runserver
 
-Any issues above, please refer to Django documentation: https://docs.djangoproject.com/en/3.1/topics/install/
+Any issues above, please refer to official Django documentation: https://docs.djangoproject.com/en/3.1/topics/install/
 
 ## Contributions
 Please feel free to contribute if you woud , even if you are not a structural engineer! Plenty of oppoutinity to contribute to front-end, UI, docmentation, etc
