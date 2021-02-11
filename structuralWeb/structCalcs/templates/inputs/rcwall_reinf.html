@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>R.C Wall Design in Accordance With AS3600:2018</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      margin: 15px 0;
+      font-weight: 400;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 50%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid rgb(61, 57, 57);
+      border-radius: 3px;
+      }
+      input:hover, select:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+      }
+      input {
+      width: calc(80%);
+      padding: 5px;
+      }
+      select {
+      width: 85%;
+      padding: 7px 0;
+      background: transparent;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .item {
+      position: relative;
+      width:30%;
+      margin: 10px 0;
+      }
+      .item3 {
+      position: relative;
+      width:35%;
+      margin-left: 20%; 
+      margin-top: -77px;
+      transform: translateX(70px);
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      font-size: 20px;
+      color: #a9a9a9;
+      }
+      .item i {
+      right: 2%;
+      top: 30px;
+      z-index: 1;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+      right: 1%;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      }
+      .btn-block-ok {
+      margin-top: 20px;
+      text-align: center;
+      float:left;   
+      }
+      .btn-block-cancel {
+      position: relative;
+      margin-top: 20px;
+      margin-left: 30px;
+      text-align: center;
+      float:left;
+      }
+      button {
+      display: inline-block;
+      padding: 10px;
+      width: 120px;
+      height: 45px;
+      text-align: center;
+      background: #2E3440;
+      color: #E5E9F0;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid #2E3440;
+      transition-duration: 0.4s;
+      }
+      button:hover {
+      background: #ECEFF4;
+      color: #4C566A;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/">
+        <h1>R.C Wall Design | Reinforcement Properties</h1>
+        <div class="item">
+          <p>Yeild Strength of Reinforcement:</p>
+          <div>
+            <input type="number" name="steelfsy" placeholder="fy (MPa)" min="1" max="1500"/>
+          </div>
+        </div>
+        <div class="item">
+          <p>Clear Cover to Reinforcement:</p>
+          <div>
+            <input type="number" name="cover" placeholder="Cover: (mm)" min="1" max="500"/>
+          </div>
+        </div>
+        <div class="item">
+            <p>No. of  Reinforcement Layers:</p>
+            <div>
+              <input type="number" name="reinforcement layers" placeholder="1No. or 2No. Layers" min="1" max="2"/>
+            </div>
+          </div>
+          <div class="item2">
+            <p>Vertical Bar Diameter</p>
+            <div>
+              <select id="bardia" name="bar diamater">
+                <option value="N12">N12</option>
+                <option value="N12">N16</option>
+                <option value="N12">N20</option>
+                <option value="N12">N24</option>
+                <option value="N12">N28</option>
+                <option value="N12">N32</option>
+                <option value="N12">N36</option>
+                <option value="N12">N40</option>
+              </select>
+            </div>
+        </div>
+        <div class="item3">
+          <p>Spacing of Vertical Reinforcement</p>
+          <div>
+            <input type="number" name="vertical reinforcement spacing" placeholder="@200mm" min="1" max="5000"/>
+          </div>
+        </div>
+        <div class="item">
+          <p>Horizontal Bar Diameter</p>
+          <div>
+            <select id="bardia" name="bar diamater">
+              <option value="N12">N12</option>
+              <option value="N12">N16</option>
+              <option value="N12">N20</option>
+              <option value="N12">N24</option>
+              <option value="N12">N28</option>
+              <option value="N12">N32</option>
+              <option value="N12">N36</option>
+              <option value="N12">N40</option>
+            </select>
+          </div>
+      </div>
+      <div class="item">
+        <p>Spacing of Horizontal Reinforcement</p>
+        <div>
+          <input type="number" name="horizontal reinforcement spacing" placeholder="@200mm" min="1" max="5000"/>
+        </div>
+      </div>
+      <div class="item">
+        <p>Reinforcement Type</p>
+        <div>
+          <select id="reinf-type" name="reinforcement type">
+            <option value="Low">Low Ductility, L</option>
+            <option value="normal">Normal Ductility, N</option>
+          </select>
+        </div>
+    </div>
+    <div class="item">
+      <p>Degree of Crack Control</p>
+      <div>
+        <select id="crack-control" name="degree of crack control">
+          <option value="minor">Minor</option>
+          <option value="moderate">Moderate</option>
+          <option value="strong">Strong</option>
+        </select>
+      </div>
+    </div>
+    <div class="item">
+      <p>Exposure Classification</p>
+      <div>
+        <select id="exp-cls" name="exposure classification">
+          <option value="normal">A1/A2</option>
+          <option value="normal">B1/B2/C1</option>
+        </select>
+      </div>
+    </div>
+
+        <div class="btn-block-ok">
+          <button type="submit" href="/">OK</button>
+        </div>
+        <div class="btn-block-cancel">
+            <button type="submit" href="/">Cancel</button>
+          </div>
+      </form>
+    </div>
+  </body>
+</html>

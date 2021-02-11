@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>R.C Wall Design in Accordance With AS3600:2018</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      margin: 15px 0;
+      font-weight: 400;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 50%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid rgb(61, 57, 57);
+      border-radius: 3px;
+      }
+      input:hover, select:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+      }
+      input {
+      width: calc(80%);
+      padding: 5px;
+      }
+      select {
+      width: 80%;
+      padding: 7px 0;
+      background: transparent;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .item {
+      position: relative;
+      width:20%;
+      margin: 10px 0;
+      }
+      .item2 {
+      position: relative;
+      width:90%;
+      margin-left: 20%; 
+      margin-top: -77px;
+      transform: translateX(20px);
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      font-size: 20px;
+      color: #a9a9a9;
+      }
+      .item i {
+      right: 2%;
+      top: 30px;
+      z-index: 1;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+      right: 1%;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      }
+      .btn-block-ok {
+      margin-top: 20px;
+      text-align: center;
+      float:left;   
+      }
+      .btn-block-cancel {
+      position: relative;
+      margin-top: 20px;
+      margin-left: 30px;
+      text-align: center;
+      float:left;
+      }
+      button {
+      display: inline-block;
+      padding: 10px;
+      width: 120px;
+      height: 45px;
+      text-align: center;
+      background: #2E3440;
+      color: #E5E9F0;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid #2E3440;
+      transition-duration: 0.4s;
+      }
+      button:hover {
+      background: #ECEFF4;
+      color: #4C566A;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myForm" class="testbox">
+      <form action="/">
+        <h1>R.C Wall Design | Wall Properties</h1>
+        <div class="item">
+          <p>Wall Height (mm):</p>
+          <div>
+            <input type="number" name="Wall Height" placeholder="Hw" min="1" max="30000"/>
+          </div>
+        </div>
+        <div class="item2">
+            <p>Is Wall Braced or Unbraced?</p>
+            <div>
+              <select id="bracing" name="bracing">
+                <option value="braced-inplane">Wall Braced & subjected to in-plane load effects only</option>
+                <option value="braced-outofplane">Wall Braced & subjected to in-plane & out-of-plane load effects</option>
+                <option value="unbraced">Wall is Unbraced</option>
+              </select>
+            </div>
+        </div>
+        <div class="item">
+          <p>Wall Length (mm):</p>
+          <div>
+            <input type="number" name="Wall Length" placeholder="Lw" min="1" max="50000"/>
+          </div>
+        </div>
+        <div class="item2">
+            <p>Wall Structure Over</p>
+            <div>
+              <select id="bracing" name="bracing">
+                <option value="braced-inplane">Cast In Situ Concrete Floor Continuous Over Wall</option>
+                <option value="braced-outofplane">Discontinous Floor Over</option>
+              </select>
+            </div>
+        </div>
+        <div class="item">
+            <p>Wall Thickness (mm):</p>
+            <div>
+              <input type="number" name="Wall Thickness" placeholder="tw" min="1" max="8000"/>
+            </div>
+          </div>
+          <div class="item">
+            <p>Effective Height Factor:</p>
+            <div>
+              <input type="number" name="k factor" placeholder="k" min="0" max="2"/>
+            </div>
+          </div>
+          <div class="item">
+            <p>Concrete Strength (MPa):</p>
+            <div>
+              <input type="number" name="Concrete Strength" placeholder="f'c" min="1" max="1000"/>
+            </div>
+          </div>
+          <div class="item">
+            <p>Concrete Density (kN/m3):</p>
+            <div>
+                <input type="number" name="Concrete Density" placeholder="yc" min="0" max="50"/>
+            </div>
+          </div>
+
+        <div class="btn-block-ok">
+          <button type="submit" href="/">OK</button>
+        </div>
+        <div class="btn-block-cancel">
+            <button type="submit" href="/">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

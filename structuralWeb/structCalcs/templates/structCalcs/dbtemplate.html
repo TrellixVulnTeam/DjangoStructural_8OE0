@@ -484,7 +484,7 @@
 						<ul class="u-sidebar-nav-menu u-sidebar-nav-menu--top-level">
 							<!-- Dashboard -->
 							<li class="u-sidebar-nav-menu__item">
-								<a class="u-sidebar-nav-menu__link active" href="index.html">
+								<a class="u-sidebar-nav-menu__link active" href="{% url 'index' %}">
 									<span class="ti-dashboard u-sidebar-nav-menu__item-icon"></span>
 									<span class="u-sidebar-nav-menu__item-title">Home</span>
 								</a>
@@ -493,28 +493,28 @@
 
 							<!-- Forms -->
 							<li class="u-sidebar-nav-menu__item">
-								<a class="u-sidebar-nav-menu__link" href="combine.html">
+								<a class="u-sidebar-nav-menu__link" href="{% url 'rcwall' %}">
 									<span class="ti-pencil-alt u-sidebar-nav-menu__item-icon"></span>
 									<span class="u-sidebar-nav-menu__item-title">R.C Wall Calculator</span>
 								</a>
 							</li>
 
 							<li class="u-sidebar-nav-menu__item">
-								<a class="u-sidebar-nav-menu__link" href={templates/accounts/convert.html'}">
+								<a class="u-sidebar-nav-menu__link" href="{% url 'retainingwall' %}">
 									<span class="ti-pencil-alt u-sidebar-nav-menu__item-icon"></span>
 									<span class="u-sidebar-nav-menu__item-title">Retaining Wall Calculator</span>
 								</a>
 							</li>
 
 							<li class="u-sidebar-nav-menu__item">
-								<a class="u-sidebar-nav-menu__link" href="convert.html">
+								<a class="u-sidebar-nav-menu__link" href="{% url 'padfooting' %}">
 									<span class="ti-pencil-alt u-sidebar-nav-menu__item-icon"></span>
 									<span class="u-sidebar-nav-menu__item-title">Pad Footing Calculator</span>
 								</a>
 							</li>
 
 							<li class="u-sidebar-nav-menu__item">
-								<a class="u-sidebar-nav-menu__link" href="forms.html">
+								<a class="u-sidebar-nav-menu__link" href="{% url 'steelcalculator' %}">
 									<span class="ti-pencil-alt u-sidebar-nav-menu__item-icon"></span>
 									<span class="u-sidebar-nav-menu__item-title">Steel Calculator</span>
 								</a>
@@ -533,7 +533,7 @@
 								<ul id="menuItemUIComponents" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
 									<!-- EziCloud -->
 									<li class="u-sidebar-nav-menu__item">
-										<a class="u-sidebar-nav-menu__link" href="ui-alerts.html">
+										<a class="u-sidebar-nav-menu__link" href="{% url 'reinlaps' %}">
 											<span class="u-sidebar-nav-menu__item-icon">R -</span>
 											<span class="u-sidebar-nav-menu__item-title">Reinforcement Laps</span>
 										</a>
@@ -542,7 +542,7 @@
 
 									<!-- Local Drive -->
 									<li class="u-sidebar-nav-menu__item">
-										<a class="u-sidebar-nav-menu__link" href="ui-buttons.html">
+										<a class="u-sidebar-nav-menu__link" href="{% url 'rcbeam' %}">
 											<span class="u-sidebar-nav-menu__item-icon">B -</span>
 											<span class="u-sidebar-nav-menu__item-title">R.C Beam</span>
 										</a>
@@ -551,7 +551,7 @@
 
 									<!-- External Cloud -->
 									<li class="u-sidebar-nav-menu__item">
-										<a class="u-sidebar-nav-menu__link" href="ui-buttons.html">
+										<a class="u-sidebar-nav-menu__link" href="{% url 'rccolumn' %}">
 											<span class="u-sidebar-nav-menu__item-icon">C -</span>
 											<span class="u-sidebar-nav-menu__item-title">R.C Column</span>
 										</a>
@@ -567,7 +567,7 @@
 
 							<!-- Documentation -->
 							<li class="u-sidebar-nav-menu__item">
-								<a class="u-sidebar-nav-menu__link" href="https://htmlstream.com/preview/awesome-dashboard-ui-kit/documentation/" target="_blank">
+								<a class="u-sidebar-nav-menu__link" href="https://github.com/daveh07/DjangoStructural" target="_blank">
 									<span class="ti-files u-sidebar-nav-menu__item-icon"></span>
 									<span class="u-sidebar-nav-menu__item-title">Documentation</span>
 								</a>

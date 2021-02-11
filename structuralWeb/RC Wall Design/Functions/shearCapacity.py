@@ -30,7 +30,7 @@ def Vuc_lowerbound(self):
 
 def Vuc_design(self):
     Vuc_des = max(Vuc_lowerbound(self), Vuc(self))  # REVIEW CODE!!!
-    phi_Vuc_des = sc_phi * Vuc_des                  # REVIEW CODE!!!
+    phi_Vuc_des = UserInputs.sc_phi * Vuc_des                  # REVIEW CODE!!!
     return Vuc_des, phi_Vuc_des                     # REVIEW CODE!!!
 
 
@@ -51,6 +51,9 @@ def Vu_max():
     phi_Vu_m = wallCalcs.sc_phi * Vu_m
     return Vu_m, phi_Vu_m
 
+
+vusResult = Vus()
+Vuc_design()
 
 # (kN) Maximum design shear strength with reduction factor applied
 phiVu = min(Vu_max(), (Vus() + Vuc_design()))  # REVIEW CODE!!!
