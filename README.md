@@ -32,5 +32,4 @@ Once pip has finished downloading the dependencies:
 Any issues above, please refer to official Django documentation: https://docs.djangoproject.com/en/3.1/topics/install/
 
 ## Contributions
-Please feel free to contribute if you woud , even if you are not a structural engineer! Plenty of oppoutinity to contribute to front-end, UI, docmentation, etc
-Other engineers using various international codes or calculations of typical engineering section properties
+Please feel free to add any contributions even if you are not a structural engineer! This can include any front-end & UI design, UX, docmentation, etc.
