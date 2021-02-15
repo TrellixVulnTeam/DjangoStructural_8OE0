@@ -31,7 +31,7 @@ def checkBP():
                + str(allowableBP) + "kPa, NOT OK!"
 
 
-print(str(BP_round) + "kPa")
+print("Applied Bearing Pressure = " + str(BP_round) + "kPa")
 
 print(checkBP())
 
@@ -65,5 +65,16 @@ def ultimateBearingStress():
                phiFactorBearing()*1.8*concGradeBearing())
 
 
-print("Design Bearing Stress: " + str(designBearingStress()) + "MPa")
-print("Ultimate Bearing Stress: " + str(ultimateBearingStress()) + "MPa")
+def ultBearingStressCheck():
+    designBearingRound = round(designBearingStress(), 2)
+    ultBearingRound = round(ultimateBearingStress(), 2)
+
+    if ultimateBearingStress() >= designBearingStress():
+        return "Design Bearing Stress: " + str(designBearingRound) + "MPa < " "Ultimate Bearing Stress: " \
+               + str(ultBearingRound) + "MPa, OK!"
+    else:
+        return "Design Bearing Stress: " + str(designBearingRound) + "MPa > " "Ultimate Bearing Stress: " \
+               + str(ultBearingRound) + "MPa, NOT OK!"
+
+
+print(ultBearingStressCheck())  # - Move to main.py later on
