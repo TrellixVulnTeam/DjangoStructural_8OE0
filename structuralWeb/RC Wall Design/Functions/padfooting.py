@@ -78,3 +78,28 @@ def ultBearingStressCheck():
 
 
 print(ultBearingStressCheck())  # - Move to main.py later on
+
+
+# --------------------------------Check Footing Minimum Depth ---------------------------------- #
+
+def lsy_cb():
+    lsycb = max((0.22*fsy_pad)/(concgrade**0.5), 200, 0.0435*fsy_pad*reinfcol)
+    return lsycb
+
+
+def Dmin():
+    d_min = lsy_cb() + Reinf_dir1 + Reinf_dir2 + cover
+    return d_min
+
+
+def footingDepthCheck():
+    print("Minimum footing Depth: " + str(Dmin()) + "mm")
+
+
+footingDepthCheck()
+
+
+# --------------------------------Punching Shear Check---------------------------------- #
+
+class punchingShearCheck:
+    pass
