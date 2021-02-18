@@ -47,6 +47,11 @@
       width: calc(80%);
       padding: 5px;
       }
+      .input-spacing {
+      width: calc(35%);
+      padding: 5px;
+      transform: translateY(-12%);
+      }
       select {
       width: 85%;
       padding: 7px 0;
@@ -60,12 +65,18 @@
       width:30%;
       margin: 10px 0;
       }
+      .item2 {
+      position: relative;
+      width:30%;
+      margin: 10px 0;
+      }
       .item3 {
       position: relative;
-      width:35%;
+      width:70%;
       margin-left: 20%; 
-      margin-top: -77px;
-      transform: translateX(70px);
+      margin-top: -4.5rem;
+      transform: translateX(100px);
+      display: block;
       }
       input[type="date"]::-webkit-inner-spin-button {
       display: none;
@@ -143,42 +154,42 @@
             <p>Vertical Bar Diameter</p>
             <div>
               <select id="bardia" name="bar diamater">
-                <option value="N12">N12</option>
-                <option value="N12">N16</option>
-                <option value="N12">N20</option>
-                <option value="N12">N24</option>
-                <option value="N12">N28</option>
-                <option value="N12">N32</option>
-                <option value="N12">N36</option>
-                <option value="N12">N40</option>
+                <option value="12">N12</option>
+                <option value="16">N16</option>
+                <option value="20">N20</option>
+                <option value="24">N24</option>
+                <option value="28">N28</option>
+                <option value="32">N32</option>
+                <option value="36">N36</option>
+                <option value="40">N40</option>
               </select>
             </div>
         </div>
         <div class="item3">
           <p>Spacing of Vertical Reinforcement</p>
           <div>
-            <input type="number" name="vertical reinforcement spacing" placeholder="@200mm" min="1" max="5000"/>
+            <input class="input-spacing" type="number" name="vertical reinforcement spacing" placeholder="@200mm" min="1" max="5000"/>
           </div>
         </div>
         <div class="item">
           <p>Horizontal Bar Diameter</p>
           <div>
             <select id="bardia" name="bar diamater">
-              <option value="N12">N12</option>
-              <option value="N12">N16</option>
-              <option value="N12">N20</option>
-              <option value="N12">N24</option>
-              <option value="N12">N28</option>
-              <option value="N12">N32</option>
-              <option value="N12">N36</option>
-              <option value="N12">N40</option>
+              <option value="12">N12</option>
+              <option value="16">N16</option>
+              <option value="20">N20</option>
+              <option value="24">N24</option>
+              <option value="28">N28</option>
+              <option value="32">N32</option>
+              <option value="36">N36</option>
+              <option value="40">N40</option>
             </select>
           </div>
       </div>
-      <div class="item">
+      <div class="item3">
         <p>Spacing of Horizontal Reinforcement</p>
         <div>
-          <input type="number" name="horizontal reinforcement spacing" placeholder="@200mm" min="1" max="5000"/>
+          <input class="input-spacing" type="number" name="vertical reinforcement spacing" placeholder="@200mm" min="1" max="5000"/>
         </div>
       </div>
       <div class="item">
