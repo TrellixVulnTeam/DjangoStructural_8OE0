@@ -2,8 +2,8 @@
 Structural Engineering Calculators Web App
 
 # Introduction
-I am a Structural Engineer from Sydney Australia and currently self-teaching myself Python. 
-I am looking at building a Django web application that has a series of useful calculators that are used everyday for the practicing structural egineer.  
+I am a Structural Engineer from Sydney Australia and currently self-learning Python. 
+I am looking at building a Django web application that has a series of useful calculators that are used everyday for the practicing structural egineer. Project is currently under development. 
 
 ## Setup
 The first thing to do is to clone the repository:
